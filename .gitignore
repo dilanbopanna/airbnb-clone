@@ -5,6 +5,11 @@
 /.pnp
 .pnp.js
 tailwind.config.js
+/lib/bs
+*.ast
+*.cmt
+.ninja
+.log
 
 # testing
 /coverage

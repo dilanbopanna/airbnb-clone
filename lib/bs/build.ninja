@@ -6,7 +6,7 @@ rule astj
   command = /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/rescript/darwin/bsc.exe  -bs-v 9.1.4 -bs-jsx 3 -bs-super-errors -absname -bs-ast -o $out $i
 o src/App.ast : astj ../../src/App.res
 rule deps
-  command = /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/rescript/darwin/bsb_helper.exe -hash 31e7b67df145db9ace5702d4ab19e301 -bs-ns RescriptReactTemplate $in
+  command = /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/rescript/darwin/bsb_helper.exe -hash 4ce26e58b779d99f9ac9968dff787151 -bs-ns RescriptReactTemplate $in
   restat = 1
 o src/App.d : deps src/App.ast
 rule mij
@@ -20,6 +20,9 @@ o src/Icon-RescriptReactTemplate.cmj src/Icon-RescriptReactTemplate.cmi ../../sr
 o src/Index.ast : astj ../../src/Index.res
 o src/Index.d : deps src/Index.ast
 o src/Index-RescriptReactTemplate.cmj src/Index-RescriptReactTemplate.cmi ../../src/Index.bs.js : mij src/Index.ast
+o src/Types.ast : astj ../../src/Types.res
+o src/Types.d : deps src/Types.ast
+o src/Types-RescriptReactTemplate.cmj src/Types-RescriptReactTemplate.cmi ../../src/Types.bs.js : mij src/Types.ast
 o src/NavBar.ast : astj ../../src/NavBar.res
 o src/NavBar.d : deps src/NavBar.ast
 o src/NavBar-RescriptReactTemplate.cmj src/NavBar-RescriptReactTemplate.cmi ../../src/NavBar.bs.js : mij src/NavBar.ast

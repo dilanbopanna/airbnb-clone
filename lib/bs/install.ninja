@@ -15,6 +15,10 @@ o Index-RescriptReactTemplate.cmi : cp ../bs/src/Index-RescriptReactTemplate.cmi
 o Index-RescriptReactTemplate.cmj : cp ../bs/src/Index-RescriptReactTemplate.cmj
 o Index-RescriptReactTemplate.cmt : cp ../bs/src/Index-RescriptReactTemplate.cmt
 o Index.res : cp ../../src/Index.res
+o Types-RescriptReactTemplate.cmi : cp ../bs/src/Types-RescriptReactTemplate.cmi
+o Types-RescriptReactTemplate.cmj : cp ../bs/src/Types-RescriptReactTemplate.cmj
+o Types-RescriptReactTemplate.cmt : cp ../bs/src/Types-RescriptReactTemplate.cmt
+o Types.res : cp ../../src/Types.res
 o NavBar-RescriptReactTemplate.cmi : cp ../bs/src/NavBar-RescriptReactTemplate.cmi
 o NavBar-RescriptReactTemplate.cmj : cp ../bs/src/NavBar-RescriptReactTemplate.cmj
 o NavBar-RescriptReactTemplate.cmt : cp ../bs/src/NavBar-RescriptReactTemplate.cmt
@@ -34,4 +38,4 @@ o OutsideClick.res : cp ../../src/Utilities/OutsideClick.res
 o RescriptReactTemplate.cmi : cp ../bs/RescriptReactTemplate.cmi
 o RescriptReactTemplate.cmj : cp ../bs/RescriptReactTemplate.cmj
 o RescriptReactTemplate.cmt : cp ../bs/RescriptReactTemplate.cmt
-build install.stamp : touch App-RescriptReactTemplate.cmi App-RescriptReactTemplate.cmj Icon-RescriptReactTemplate.cmi Icon-RescriptReactTemplate.cmj Index-RescriptReactTemplate.cmi Index-RescriptReactTemplate.cmj NavBar-RescriptReactTemplate.cmi NavBar-RescriptReactTemplate.cmj Search-RescriptReactTemplate.cmi Search-RescriptReactTemplate.cmj AirbnbSvg-RescriptReactTemplate.cmi AirbnbSvg-RescriptReactTemplate.cmj OutsideClick-RescriptReactTemplate.cmi OutsideClick-RescriptReactTemplate.cmj RescriptReactTemplate.cmi RescriptReactTemplate.cmj
+build install.stamp : touch App-RescriptReactTemplate.cmi App-RescriptReactTemplate.cmj Icon-RescriptReactTemplate.cmi Icon-RescriptReactTemplate.cmj Index-RescriptReactTemplate.cmi Index-RescriptReactTemplate.cmj Types-RescriptReactTemplate.cmi Types-RescriptReactTemplate.cmj NavBar-RescriptReactTemplate.cmi NavBar-RescriptReactTemplate.cmj Search-RescriptReactTemplate.cmi Search-RescriptReactTemplate.cmj AirbnbSvg-RescriptReactTemplate.cmi AirbnbSvg-RescriptReactTemplate.cmj OutsideClick-RescriptReactTemplate.cmi OutsideClick-RescriptReactTemplate.cmj RescriptReactTemplate.cmi RescriptReactTemplate.cmj

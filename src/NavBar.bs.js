@@ -20,13 +20,43 @@ var ProfileItem = {
   make: NavBar$ProfileItem
 };
 
+function NavBar$SearchDateItem(Props) {
+  var text1 = Props.text1;
+  var text2 = Props.text2;
+  return React.createElement("div", {
+              className: "p-2 px-8 cursor-pointer h-full hover:bg-[#ebebeb] hover:bg-clip-padding rounded-full flex justify-center items-center flex-col "
+            }, React.createElement("div", {
+                  className: "font-bold self-start text-[12px] tracking-wide"
+                }, text1), React.createElement("div", {
+                  className: "font-light self-start text-[14px] text-[#717171]"
+                }, text2));
+}
+
+var SearchDateItem = {
+  make: NavBar$SearchDateItem
+};
+
 function NavBar(Props) {
   var match = React.useState(function () {
         return false;
       });
   var setOpenProfile = match[1];
   var openProfile = match[0];
+  var match$1 = React.useState(function () {
+        return false;
+      });
+  var setOpenSearch = match$1[1];
+  var openSearch = match$1[0];
+  var match$2 = React.useState(function () {
+        return /* Stays */0;
+      });
+  var catagory = match$2[0];
+  var match$3 = React.useState(function () {
+        return false;
+      });
+  var setHover = match$3[1];
   var profileRef = React.useRef(null);
+  var navRef = React.useRef(null);
   OutsideClick$RescriptReactTemplate.useOutsideClick({
         TAG: /* ArrayOfRef */0,
         _0: [profileRef]
@@ -35,64 +65,137 @@ function NavBar(Props) {
                         return !x;
                       }));
         }), undefined);
+  OutsideClick$RescriptReactTemplate.useOutsideClick({
+        TAG: /* ArrayOfRef */0,
+        _0: [navRef]
+      }, undefined, openSearch, undefined, (function (param) {
+          return Curry._1(setOpenSearch, (function (x) {
+                        return !x;
+                      }));
+        }), undefined);
+  var breakLine = React.createElement("div", {
+        className: "h-auto w-[1px] " + (
+          match$3[0] ? "bg-transparent" : "bg-[#dddddd]"
+        ) + " my-2"
+      });
   return React.createElement("div", {
-              className: "sticky h-20 border border-b-[#ebebeb] px-5 md:px-10 lg:px-16 flex items-center justify-between"
+              className: "w-screen h-screen"
             }, React.createElement("div", {
-                  className: "text-[#fe385c] xl:w-1/3 hidden md:flex"
-                }, AirbnbSvg$RescriptReactTemplate.bnbwithtext), React.createElement("div", {
-                  className: "text-[#fe385c] xl:w-1/3 hidden md:hidden sm:flex"
-                }, AirbnbSvg$RescriptReactTemplate.bnblogo), React.createElement(Search$RescriptReactTemplate.make, {}), React.createElement("div", {
-                  className: "hidden sm:flex flex-row xl:w-1/3  justify-end"
+                  ref: navRef,
+                  className: "sticky " + (
+                    openSearch ? "h-20 sm:h-40" : "h-20"
+                  ) + " border border-b-[#ebebeb] flex flex-col",
+                  style: {
+                    transition: "height 0.5s ease"
+                  }
                 }, React.createElement("div", {
-                      className: "font-medium text-sm flex flex-row gap-2 items-center cursor-pointer"
+                      className: "flex flex-row items-center justify-between px-5 md:px-10 lg:px-16 h-auto py-4"
                     }, React.createElement("div", {
-                          className: "h-11 hidden xl:flex hover:bg-[#f7f7f7] rounded-full p-4  transition-colors items-center justify-center"
-                        }, "Airbnb your home"), React.createElement("div", {
-                          className: "h-11 hidden lg:flex hover:bg-[#f7f7f7] rounded-full p-4 transition-colors items-center justify-center"
-                        }, React.createElement(Icon$RescriptReactTemplate.make, {
-                              name: "world",
-                              size: 16
-                            })), React.createElement("div", {
-                          className: "flex flex-row gap-1 md:gap-3 p-1 px-2 ml-2 pl-3 border border-[#dddddd] rounded-full h-11 shadow-[#000000]/10 hover:shadow-md transition-shadow items-center justify-center",
-                          onClick: (function (param) {
-                              return Curry._1(setOpenProfile, (function (prev) {
-                                            return !prev;
-                                          }));
-                            })
-                        }, React.createElement(Icon$RescriptReactTemplate.make, {
-                              name: "hamburger",
-                              size: 16,
-                              className: "text-[#222222] "
-                            }), React.createElement(Icon$RescriptReactTemplate.make, {
-                              name: "avatar",
-                              size: 29,
-                              className: "text-[#717171]"
-                            }), openProfile ? React.createElement("div", {
-                                ref: profileRef,
-                                className: "flex bg-white flex-col absolute top-16 right-16 rounded-xl h-auto transition-shadow items-center justify-center min-w-max py-2 mt-2",
-                                style: {
-                                  boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"
-                                }
-                              }, React.createElement(NavBar$ProfileItem, {
-                                    item: "Sign up",
-                                    className: "font-semibold"
-                                  }), React.createElement(NavBar$ProfileItem, {
-                                    item: "Log in"
-                                  }), React.createElement("div", {
-                                    className: "w-full h-[1px] bg-[#dddddd] my-2"
-                                  }), React.createElement(NavBar$ProfileItem, {
-                                    item: "Airbnb your home"
-                                  }), React.createElement(NavBar$ProfileItem, {
-                                    item: "Host an experience"
-                                  }), React.createElement(NavBar$ProfileItem, {
-                                    item: "Help"
-                                  })) : null))));
+                          className: "text-[#fe385c] xl:w-1/3 hidden md:flex"
+                        }, AirbnbSvg$RescriptReactTemplate.bnbwithtext), React.createElement("div", {
+                          className: "text-[#fe385c] xl:w-1/3 hidden md:hidden sm:flex"
+                        }, AirbnbSvg$RescriptReactTemplate.bnblogo), React.createElement(Search$RescriptReactTemplate.make, {
+                          openSearch: openSearch,
+                          setOpenSearch: setOpenSearch,
+                          catagory: catagory,
+                          setCatagory: match$2[1]
+                        }), React.createElement("div", {
+                          className: "hidden sm:flex flex-row xl:w-1/3  justify-end"
+                        }, React.createElement("div", {
+                              className: "font-medium text-sm flex flex-row gap-2 items-center cursor-pointer"
+                            }, React.createElement("div", {
+                                  className: "h-11 hidden xl:flex hover:bg-[#f7f7f7] rounded-full p-4  transition-colors items-center justify-center"
+                                }, "Airbnb your home"), React.createElement("div", {
+                                  className: "h-11 hidden lg:flex hover:bg-[#f7f7f7] rounded-full p-4 transition-colors items-center justify-center"
+                                }, React.createElement(Icon$RescriptReactTemplate.make, {
+                                      name: "world",
+                                      size: 16
+                                    })), React.createElement("div", {
+                                  className: "flex flex-row gap-1 md:gap-3 p-1 px-2 ml-2 pl-3 border border-[#dddddd] rounded-full h-11 shadow-[#000000]/10 hover:shadow-md transition-shadow items-center justify-center",
+                                  onClick: (function (param) {
+                                      return Curry._1(setOpenProfile, (function (prev) {
+                                                    return !prev;
+                                                  }));
+                                    })
+                                }, React.createElement(Icon$RescriptReactTemplate.make, {
+                                      name: "hamburger",
+                                      size: 16,
+                                      className: "text-[#222222] "
+                                    }), React.createElement(Icon$RescriptReactTemplate.make, {
+                                      name: "avatar",
+                                      size: 29,
+                                      className: "text-[#717171]"
+                                    }), openProfile ? React.createElement("div", {
+                                        ref: profileRef,
+                                        className: "flex bg-white flex-col absolute top-16 right-16 rounded-xl h-auto transition-shadow items-center justify-center min-w-max py-2 mt-2",
+                                        style: {
+                                          boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"
+                                        }
+                                      }, React.createElement(NavBar$ProfileItem, {
+                                            item: "Sign up",
+                                            className: "font-semibold"
+                                          }), React.createElement(NavBar$ProfileItem, {
+                                            item: "Log in"
+                                          }), React.createElement("div", {
+                                            className: "w-full h-[1px] bg-[#dddddd] my-2"
+                                          }), React.createElement(NavBar$ProfileItem, {
+                                            item: "Airbnb your home"
+                                          }), React.createElement(NavBar$ProfileItem, {
+                                            item: "Host an experience"
+                                          }), React.createElement(NavBar$ProfileItem, {
+                                            item: "Help"
+                                          })) : null)))), openSearch ? React.createElement("div", {
+                        className: "hidden sm:flex justify-center items-center"
+                      }, React.createElement("div", {
+                            className: "h-16  flex flex-row w-auto border border-[#dddddd] rounded-full",
+                            onMouseEnter: (function (param) {
+                                return Curry._1(setHover, (function (param) {
+                                              return true;
+                                            }));
+                              }),
+                            onMouseLeave: (function (param) {
+                                return Curry._1(setHover, (function (param) {
+                                              return false;
+                                            }));
+                              })
+                          }, React.createElement("div", {
+                                className: " p-1 px-6 w-64 cursor-pointer h-full hover:bg-[#ebebeb] hover:bg-clip-padding rounded-full flex justify-center items-center flex-col "
+                              }, React.createElement("div", {
+                                    className: "font-bold pl-3 self-start text-[12px] tracking-wide"
+                                  }, "Where"), React.createElement("div", {
+                                    className: "font-medium pl-3 self-start text-[14px]"
+                                  }, "Map Area")), breakLine, catagory !== 1 ? React.createElement(React.Fragment, undefined, React.createElement(NavBar$SearchDateItem, {
+                                      text1: "Check in",
+                                      text2: "Add dates"
+                                    }), breakLine, React.createElement(NavBar$SearchDateItem, {
+                                      text1: "Check out",
+                                      text2: "Add dates"
+                                    }), breakLine) : React.createElement(React.Fragment, undefined, React.createElement(NavBar$SearchDateItem, {
+                                      text1: "Check in",
+                                      text2: "Add dates"
+                                    }), breakLine), React.createElement("div", {
+                                className: " p-2 pl-8 pr-3 cursor-pointer h-full hover:bg-[#ebebeb] hover:bg-clip-padding rounded-full flex justify-between gap-4 items-center flex-row"
+                              }, React.createElement("div", {
+                                    className: "flex flex-col justify-center items-center"
+                                  }, React.createElement("div", {
+                                        className: "font-bold  self-start text-[12px] tracking-wide"
+                                      }, "Who"), React.createElement("div", {
+                                        className: "font-light self-start text-[14px] text-[#717171]"
+                                      }, "Add guests")), React.createElement("div", {
+                                    className: " h-11 w-11 bg-[#fe385c] rounded-full flex justify-center items-center"
+                                  }, React.createElement(Icon$RescriptReactTemplate.make, {
+                                        name: "search",
+                                        size: 20,
+                                        width: 15,
+                                        className: "text-white"
+                                      }))))) : null));
 }
 
 var make = NavBar;
 
 export {
   ProfileItem ,
+  SearchDateItem ,
   make ,
   
 }
