@@ -3,15 +3,35 @@ rule cp
   command = cp $i $out
 rule touch
  command = touch $out
-o Test-RescriptReactTemplate.cmi : cp ../bs/src/Test-RescriptReactTemplate.cmi
-o Test-RescriptReactTemplate.cmj : cp ../bs/src/Test-RescriptReactTemplate.cmj
-o Test-RescriptReactTemplate.cmt : cp ../bs/src/Test-RescriptReactTemplate.cmt
-o Test.res : cp ../../src/Test.res
+o App-RescriptReactTemplate.cmi : cp ../bs/src/App-RescriptReactTemplate.cmi
+o App-RescriptReactTemplate.cmj : cp ../bs/src/App-RescriptReactTemplate.cmj
+o App-RescriptReactTemplate.cmt : cp ../bs/src/App-RescriptReactTemplate.cmt
+o App.res : cp ../../src/App.res
+o Icon-RescriptReactTemplate.cmi : cp ../bs/src/Icon-RescriptReactTemplate.cmi
+o Icon-RescriptReactTemplate.cmj : cp ../bs/src/Icon-RescriptReactTemplate.cmj
+o Icon-RescriptReactTemplate.cmt : cp ../bs/src/Icon-RescriptReactTemplate.cmt
+o Icon.res : cp ../../src/Icon.res
 o Index-RescriptReactTemplate.cmi : cp ../bs/src/Index-RescriptReactTemplate.cmi
 o Index-RescriptReactTemplate.cmj : cp ../bs/src/Index-RescriptReactTemplate.cmj
 o Index-RescriptReactTemplate.cmt : cp ../bs/src/Index-RescriptReactTemplate.cmt
 o Index.res : cp ../../src/Index.res
+o NavBar-RescriptReactTemplate.cmi : cp ../bs/src/NavBar-RescriptReactTemplate.cmi
+o NavBar-RescriptReactTemplate.cmj : cp ../bs/src/NavBar-RescriptReactTemplate.cmj
+o NavBar-RescriptReactTemplate.cmt : cp ../bs/src/NavBar-RescriptReactTemplate.cmt
+o NavBar.res : cp ../../src/NavBar.res
+o Search-RescriptReactTemplate.cmi : cp ../bs/src/Search-RescriptReactTemplate.cmi
+o Search-RescriptReactTemplate.cmj : cp ../bs/src/Search-RescriptReactTemplate.cmj
+o Search-RescriptReactTemplate.cmt : cp ../bs/src/Search-RescriptReactTemplate.cmt
+o Search.res : cp ../../src/Search.res
+o AirbnbSvg-RescriptReactTemplate.cmi : cp ../bs/src/AirbnbSvg-RescriptReactTemplate.cmi
+o AirbnbSvg-RescriptReactTemplate.cmj : cp ../bs/src/AirbnbSvg-RescriptReactTemplate.cmj
+o AirbnbSvg-RescriptReactTemplate.cmt : cp ../bs/src/AirbnbSvg-RescriptReactTemplate.cmt
+o AirbnbSvg.res : cp ../../src/AirbnbSvg.res
+o OutsideClick-RescriptReactTemplate.cmi : cp ../bs/src/Utilities/OutsideClick-RescriptReactTemplate.cmi
+o OutsideClick-RescriptReactTemplate.cmj : cp ../bs/src/Utilities/OutsideClick-RescriptReactTemplate.cmj
+o OutsideClick-RescriptReactTemplate.cmt : cp ../bs/src/Utilities/OutsideClick-RescriptReactTemplate.cmt
+o OutsideClick.res : cp ../../src/Utilities/OutsideClick.res
 o RescriptReactTemplate.cmi : cp ../bs/RescriptReactTemplate.cmi
 o RescriptReactTemplate.cmj : cp ../bs/RescriptReactTemplate.cmj
 o RescriptReactTemplate.cmt : cp ../bs/RescriptReactTemplate.cmt
-build install.stamp : touch Test-RescriptReactTemplate.cmi Test-RescriptReactTemplate.cmj Index-RescriptReactTemplate.cmi Index-RescriptReactTemplate.cmj RescriptReactTemplate.cmi RescriptReactTemplate.cmj
+build install.stamp : touch App-RescriptReactTemplate.cmi App-RescriptReactTemplate.cmj Icon-RescriptReactTemplate.cmi Icon-RescriptReactTemplate.cmj Index-RescriptReactTemplate.cmi Index-RescriptReactTemplate.cmj NavBar-RescriptReactTemplate.cmi NavBar-RescriptReactTemplate.cmj Search-RescriptReactTemplate.cmi Search-RescriptReactTemplate.cmj AirbnbSvg-RescriptReactTemplate.cmi AirbnbSvg-RescriptReactTemplate.cmj OutsideClick-RescriptReactTemplate.cmi OutsideClick-RescriptReactTemplate.cmj RescriptReactTemplate.cmi RescriptReactTemplate.cmj

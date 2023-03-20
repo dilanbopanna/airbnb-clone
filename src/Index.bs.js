@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import * as ReactDom from "react-dom";
-import * as Test$RescriptReactTemplate from "./Test.bs.js";
+import * as App$RescriptReactTemplate from "./App.bs.js";
 
 require("tailwindcss/tailwind.css")
 ;
@@ -19,7 +19,7 @@ if (container == null) {
             className: "h-auto flex flex-col "
           }, React.createElement("div", {
                 className: "h-auto flex flex-col"
-              }, React.createElement(Test$RescriptReactTemplate.make, {}))));
+              }, React.createElement(App$RescriptReactTemplate.make, {}))));
   app = undefined;
 }
 

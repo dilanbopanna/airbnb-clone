@@ -6,7 +6,7 @@ let app = switch ReactDOM.querySelector("#app") {
   let root = createRoot(container)
   root->render(
     <div className="h-auto flex flex-col ">
-      <div className="h-auto flex flex-col"> <Test /> </div>
+      <div className="h-auto flex flex-col"> <App /> </div>
     </div>,
   )
 | None => ()

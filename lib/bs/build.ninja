@@ -1,23 +1,38 @@
 rescript = 1
-g_finger := /Users/bopanna/Code/rescript-react-template/node_modules/@rescript/react/lib/ocaml/install.stamp
-g_finger := /Users/bopanna/Code/rescript-react-template/node_modules/bs-fetch/lib/ocaml/install.stamp
-g_finger := /Users/bopanna/Code/rescript-react-template/node_modules/bs-webapi/lib/ocaml/install.stamp
+g_finger := /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/@rescript/react/lib/ocaml/install.stamp
+g_finger := /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/bs-fetch/lib/ocaml/install.stamp
+g_finger := /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/bs-webapi/lib/ocaml/install.stamp
 rule astj
-  command = /Users/bopanna/Code/rescript-react-template/node_modules/rescript/darwin/bsc.exe  -bs-v 9.1.4 -bs-jsx 3 -bs-super-errors -absname -bs-ast -o $out $i
-o src/Test.ast : astj ../../src/Test.res
+  command = /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/rescript/darwin/bsc.exe  -bs-v 9.1.4 -bs-jsx 3 -bs-super-errors -absname -bs-ast -o $out $i
+o src/App.ast : astj ../../src/App.res
 rule deps
-  command = /Users/bopanna/Code/rescript-react-template/node_modules/rescript/darwin/bsb_helper.exe -hash a450918b4e075c41a3314732bb1a9d19 -bs-ns RescriptReactTemplate $in
+  command = /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/rescript/darwin/bsb_helper.exe -hash 31e7b67df145db9ace5702d4ab19e301 -bs-ns RescriptReactTemplate $in
   restat = 1
-o src/Test.d : deps src/Test.ast
+o src/App.d : deps src/App.ast
 rule mij
-  command = /Users/bopanna/Code/rescript-react-template/node_modules/rescript/darwin/bsc.exe -bs-ns RescriptReactTemplate -I . -I src -I /Users/bopanna/Code/rescript-react-template/node_modules/@rescript/react/lib/ocaml -I /Users/bopanna/Code/rescript-react-template/node_modules/bs-fetch/lib/ocaml -I /Users/bopanna/Code/rescript-react-template/node_modules/bs-webapi/lib/ocaml -bs-super-errors  -bs-package-name rescript-react-template -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  command = /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/rescript/darwin/bsc.exe -bs-ns RescriptReactTemplate -I . -I src/Utilities -I src -I /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/@rescript/react/lib/ocaml -I /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/bs-fetch/lib/ocaml -I /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/bs-webapi/lib/ocaml -bs-super-errors  -bs-package-name rescript-react-template -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
-o src/Test-RescriptReactTemplate.cmj src/Test-RescriptReactTemplate.cmi ../../src/Test.bs.js : mij src/Test.ast
+o src/App-RescriptReactTemplate.cmj src/App-RescriptReactTemplate.cmi ../../src/App.bs.js : mij src/App.ast
+o src/Icon.ast : astj ../../src/Icon.res
+o src/Icon.d : deps src/Icon.ast
+o src/Icon-RescriptReactTemplate.cmj src/Icon-RescriptReactTemplate.cmi ../../src/Icon.bs.js : mij src/Icon.ast
 o src/Index.ast : astj ../../src/Index.res
 o src/Index.d : deps src/Index.ast
 o src/Index-RescriptReactTemplate.cmj src/Index-RescriptReactTemplate.cmi ../../src/Index.bs.js : mij src/Index.ast
+o src/NavBar.ast : astj ../../src/NavBar.res
+o src/NavBar.d : deps src/NavBar.ast
+o src/NavBar-RescriptReactTemplate.cmj src/NavBar-RescriptReactTemplate.cmi ../../src/NavBar.bs.js : mij src/NavBar.ast
+o src/Search.ast : astj ../../src/Search.res
+o src/Search.d : deps src/Search.ast
+o src/Search-RescriptReactTemplate.cmj src/Search-RescriptReactTemplate.cmi ../../src/Search.bs.js : mij src/Search.ast
+o src/AirbnbSvg.ast : astj ../../src/AirbnbSvg.res
+o src/AirbnbSvg.d : deps src/AirbnbSvg.ast
+o src/AirbnbSvg-RescriptReactTemplate.cmj src/AirbnbSvg-RescriptReactTemplate.cmi ../../src/AirbnbSvg.bs.js : mij src/AirbnbSvg.ast
+o src/Utilities/OutsideClick.ast : astj ../../src/Utilities/OutsideClick.res
+o src/Utilities/OutsideClick.d : deps src/Utilities/OutsideClick.ast
+o src/Utilities/OutsideClick-RescriptReactTemplate.cmj src/Utilities/OutsideClick-RescriptReactTemplate.cmi ../../src/Utilities/OutsideClick.bs.js : mij src/Utilities/OutsideClick.ast
 rule build_package
-  command = /Users/bopanna/Code/rescript-react-template/node_modules/rescript/darwin/bsc.exe -w -49 -color always -no-alias-deps  $i
+  command = /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/rescript/darwin/bsc.exe -w -49 -color always -no-alias-deps  $i
   restat = 1
 o RescriptReactTemplate.cmi : build_package RescriptReactTemplate.mlmap
