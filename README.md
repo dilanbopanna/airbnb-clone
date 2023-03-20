@@ -1,4 +1,4 @@
-# Getting Started with Create Rescript-React App
+# Getting Started with Airbnb Clone
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 Later rescript library was installed on this existing project.
