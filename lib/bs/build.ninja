@@ -6,7 +6,7 @@ rule astj
   command = /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/rescript/darwin/bsc.exe  -bs-v 9.1.4 -bs-jsx 3 -bs-super-errors -absname -bs-ast -o $out $i
 o src/App.ast : astj ../../src/App.res
 rule deps
-  command = /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/rescript/darwin/bsb_helper.exe -hash 4ce26e58b779d99f9ac9968dff787151 -bs-ns RescriptReactTemplate $in
+  command = /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/rescript/darwin/bsb_helper.exe -hash 94faf734320244ada38773c4ca058a25 -bs-ns RescriptReactTemplate $in
   restat = 1
 o src/App.d : deps src/App.ast
 rule mij
@@ -29,9 +29,15 @@ o src/NavBar-RescriptReactTemplate.cmj src/NavBar-RescriptReactTemplate.cmi ../.
 o src/Search.ast : astj ../../src/Search.res
 o src/Search.d : deps src/Search.ast
 o src/Search-RescriptReactTemplate.cmj src/Search-RescriptReactTemplate.cmi ../../src/Search.bs.js : mij src/Search.ast
+o src/Filters.ast : astj ../../src/Filters.res
+o src/Filters.d : deps src/Filters.ast
+o src/Filters-RescriptReactTemplate.cmj src/Filters-RescriptReactTemplate.cmi ../../src/Filters.bs.js : mij src/Filters.ast
 o src/AirbnbSvg.ast : astj ../../src/AirbnbSvg.res
 o src/AirbnbSvg.d : deps src/AirbnbSvg.ast
 o src/AirbnbSvg-RescriptReactTemplate.cmj src/AirbnbSvg-RescriptReactTemplate.cmi ../../src/AirbnbSvg.bs.js : mij src/AirbnbSvg.ast
+o src/FilterUtils.ast : astj ../../src/FilterUtils.res
+o src/FilterUtils.d : deps src/FilterUtils.ast
+o src/FilterUtils-RescriptReactTemplate.cmj src/FilterUtils-RescriptReactTemplate.cmi ../../src/FilterUtils.bs.js : mij src/FilterUtils.ast
 o src/Utilities/OutsideClick.ast : astj ../../src/Utilities/OutsideClick.res
 o src/Utilities/OutsideClick.d : deps src/Utilities/OutsideClick.ast
 o src/Utilities/OutsideClick-RescriptReactTemplate.cmj src/Utilities/OutsideClick-RescriptReactTemplate.cmi ../../src/Utilities/OutsideClick.bs.js : mij src/Utilities/OutsideClick.ast

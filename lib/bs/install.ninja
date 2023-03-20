@@ -27,10 +27,18 @@ o Search-RescriptReactTemplate.cmi : cp ../bs/src/Search-RescriptReactTemplate.c
 o Search-RescriptReactTemplate.cmj : cp ../bs/src/Search-RescriptReactTemplate.cmj
 o Search-RescriptReactTemplate.cmt : cp ../bs/src/Search-RescriptReactTemplate.cmt
 o Search.res : cp ../../src/Search.res
+o Filters-RescriptReactTemplate.cmi : cp ../bs/src/Filters-RescriptReactTemplate.cmi
+o Filters-RescriptReactTemplate.cmj : cp ../bs/src/Filters-RescriptReactTemplate.cmj
+o Filters-RescriptReactTemplate.cmt : cp ../bs/src/Filters-RescriptReactTemplate.cmt
+o Filters.res : cp ../../src/Filters.res
 o AirbnbSvg-RescriptReactTemplate.cmi : cp ../bs/src/AirbnbSvg-RescriptReactTemplate.cmi
 o AirbnbSvg-RescriptReactTemplate.cmj : cp ../bs/src/AirbnbSvg-RescriptReactTemplate.cmj
 o AirbnbSvg-RescriptReactTemplate.cmt : cp ../bs/src/AirbnbSvg-RescriptReactTemplate.cmt
 o AirbnbSvg.res : cp ../../src/AirbnbSvg.res
+o FilterUtils-RescriptReactTemplate.cmi : cp ../bs/src/FilterUtils-RescriptReactTemplate.cmi
+o FilterUtils-RescriptReactTemplate.cmj : cp ../bs/src/FilterUtils-RescriptReactTemplate.cmj
+o FilterUtils-RescriptReactTemplate.cmt : cp ../bs/src/FilterUtils-RescriptReactTemplate.cmt
+o FilterUtils.res : cp ../../src/FilterUtils.res
 o OutsideClick-RescriptReactTemplate.cmi : cp ../bs/src/Utilities/OutsideClick-RescriptReactTemplate.cmi
 o OutsideClick-RescriptReactTemplate.cmj : cp ../bs/src/Utilities/OutsideClick-RescriptReactTemplate.cmj
 o OutsideClick-RescriptReactTemplate.cmt : cp ../bs/src/Utilities/OutsideClick-RescriptReactTemplate.cmt
@@ -38,4 +46,4 @@ o OutsideClick.res : cp ../../src/Utilities/OutsideClick.res
 o RescriptReactTemplate.cmi : cp ../bs/RescriptReactTemplate.cmi
 o RescriptReactTemplate.cmj : cp ../bs/RescriptReactTemplate.cmj
 o RescriptReactTemplate.cmt : cp ../bs/RescriptReactTemplate.cmt
-build install.stamp : touch App-RescriptReactTemplate.cmi App-RescriptReactTemplate.cmj Icon-RescriptReactTemplate.cmi Icon-RescriptReactTemplate.cmj Index-RescriptReactTemplate.cmi Index-RescriptReactTemplate.cmj Types-RescriptReactTemplate.cmi Types-RescriptReactTemplate.cmj NavBar-RescriptReactTemplate.cmi NavBar-RescriptReactTemplate.cmj Search-RescriptReactTemplate.cmi Search-RescriptReactTemplate.cmj AirbnbSvg-RescriptReactTemplate.cmi AirbnbSvg-RescriptReactTemplate.cmj OutsideClick-RescriptReactTemplate.cmi OutsideClick-RescriptReactTemplate.cmj RescriptReactTemplate.cmi RescriptReactTemplate.cmj
+build install.stamp : touch App-RescriptReactTemplate.cmi App-RescriptReactTemplate.cmj Icon-RescriptReactTemplate.cmi Icon-RescriptReactTemplate.cmj Index-RescriptReactTemplate.cmi Index-RescriptReactTemplate.cmj Types-RescriptReactTemplate.cmi Types-RescriptReactTemplate.cmj NavBar-RescriptReactTemplate.cmi NavBar-RescriptReactTemplate.cmj Search-RescriptReactTemplate.cmi Search-RescriptReactTemplate.cmj Filters-RescriptReactTemplate.cmi Filters-RescriptReactTemplate.cmj AirbnbSvg-RescriptReactTemplate.cmi AirbnbSvg-RescriptReactTemplate.cmj FilterUtils-RescriptReactTemplate.cmi FilterUtils-RescriptReactTemplate.cmj OutsideClick-RescriptReactTemplate.cmi OutsideClick-RescriptReactTemplate.cmj RescriptReactTemplate.cmi RescriptReactTemplate.cmj

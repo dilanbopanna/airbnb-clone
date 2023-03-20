@@ -5,16 +5,15 @@
 /.pnp
 .pnp.js
 /lib/bs
-*.ast
 *.cmt
 .ninja
 .log
+/dist/
+
 
 # testing
 /coverage
 
-# production
-/build
 
 # misc
 .DS_Store
