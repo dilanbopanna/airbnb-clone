@@ -3,6 +3,8 @@
 import * as Curry from "rescript/lib/es6/curry.js";
 import * as React from "react";
 import * as Caml_array from "rescript/lib/es6/caml_array.js";
+import * as Belt_Option from "rescript/lib/es6/belt_Option.js";
+import * as Caml_option from "rescript/lib/es6/caml_option.js";
 import * as Icon$RescriptReactTemplate from "./Icon.bs.js";
 import * as FilterUtils$RescriptReactTemplate from "./FilterUtils.bs.js";
 
@@ -10,18 +12,13 @@ function Filters$FilterItem(Props) {
   var item = Props.item;
   var selected = Props.selected;
   var setSelected = Props.setSelected;
-  var openProfile = Props.openProfile;
   var match = React.useState(function () {
         return false;
       });
   var setHover = match[1];
   var hover = match[0];
   return React.createElement("div", {
-              className: "flex flex-col cursor-pointer min-w-fit transition-opacity mt-3 items-center relative gap-2 " + (
-                selected === item.type_ ? "" : "hover:opacity-100 opacity-50"
-              ) + "\n          " + (
-                openProfile ? "z-[-2]" : ""
-              ) + "\n          ",
+              className: "flex flex-col gap-1 items-center min-w-[3.7rem]",
               onClick: (function (param) {
                   return Curry._1(setSelected, (function (param) {
                                 return item.type_;
@@ -50,6 +47,23 @@ var FilterItem = {
   make: Filters$FilterItem
 };
 
+function scrollToLeft(ref) {
+  return Belt_Option.forEach(Caml_option.nullable_to_opt(ref.current), (function (input) {
+                input.scrollIntoView({
+                      behavior: "smooth",
+                      block: "nearest",
+                      inline: "start"
+                    });
+                
+              }));
+}
+
+function getBoundingRectInfo(ref, getter) {
+  return Belt_Option.mapWithDefault(Belt_Option.map(Caml_option.nullable_to_opt(ref.current), (function (prim) {
+                    return prim.getBoundingClientRect();
+                  })), 0, getter);
+}
+
 function Filters(Props) {
   var openProfile = Props.openProfile;
   var match = React.useState(function () {
@@ -57,18 +71,88 @@ function Filters(Props) {
       });
   var setSelected = match[1];
   var selected = match[0];
+  var match$1 = React.useState(function () {
+        return false;
+      });
+  var setIsLeftArrowVisible = match$1[1];
+  var match$2 = React.useState(function () {
+        return true;
+      });
+  var setIsRightArrowVisible = match$2[1];
+  var firstTabRef = React.useRef(null);
+  var scrollRef = React.useRef(null);
+  var lastTabRef = React.useRef(null);
+  var onScroll = function (_ev) {
+    var leftVal = getBoundingRectInfo(firstTabRef, (function (val) {
+            return val.x;
+          }));
+    var rightVal = getBoundingRectInfo(lastTabRef, (function (val) {
+            return val.right;
+          }));
+    var scrollValLeft = getBoundingRectInfo(scrollRef, (function (val) {
+            return val.x;
+          }));
+    var scrollValRight = getBoundingRectInfo(scrollRef, (function (val) {
+            return val.right;
+          }));
+    var newIsLeftArrowVisible = (leftVal - scrollValLeft | 0) < 0;
+    var newIsRightArrowVisible = (rightVal - scrollValRight | 0) >= 10;
+    Curry._1(setIsLeftArrowVisible, (function (param) {
+            return newIsLeftArrowVisible;
+          }));
+    return Curry._1(setIsRightArrowVisible, (function (param) {
+                  return newIsRightArrowVisible;
+                }));
+  };
   return React.createElement("div", {
-              className: " hidden sm:flex flex-row border h-20 w-full shadow-sm px-5 md:px-10 lg:px-16"
-            }, React.createElement("div", {
-                  className: "flex flex-row gap-8 w-[90%] overflow-x-scroll"
-                }, FilterUtils$RescriptReactTemplate.filters.map(function (item) {
-                      return React.createElement(Filters$FilterItem, {
-                                  item: item,
-                                  selected: selected,
-                                  setSelected: setSelected,
-                                  openProfile: openProfile
-                                });
-                    })), React.createElement("div", {
+              className: " hidden sm:flex flex-row h-20 w-full shadow-md px-5 md:px-10 lg:px-16"
+            }, match$1[0] ? React.createElement("div", {
+                    className: "h-[1.7rem] w-[1.7rem] rounded-full border border-[#c3c3c3] flex justify-center items-center self-center -mr-8 bg-white cursor-pointer",
+                    style: {
+                      zIndex: "2"
+                    },
+                    onClick: (function (param) {
+                        return scrollToLeft(firstTabRef);
+                      })
+                  }, React.createElement(Icon$RescriptReactTemplate.make, {
+                        name: "left-chevron",
+                        size: 11
+                      })) : null, React.createElement("div", {
+                  ref: scrollRef,
+                  className: "flex flex-row gap-8 w-[90%] overflow-x-scroll relative",
+                  onScroll: onScroll
+                }, FilterUtils$RescriptReactTemplate.filters.map(function (item, i) {
+                      var ref = i === 0 ? Caml_option.some(firstTabRef) : (
+                          i === (FilterUtils$RescriptReactTemplate.filters.length - 1 | 0) ? Caml_option.some(lastTabRef) : undefined
+                        );
+                      var tmp = {
+                        key: String(i),
+                        className: "flex flex-col cursor-pointer min-w-fit transition-opacity mt-3 items-center relative gap-2 " + (
+                          selected === item.type_ ? "" : "hover:opacity-100 opacity-50"
+                        ) + "\n          " + (
+                          openProfile ? "z-[-2]" : ""
+                        ) + "\n          "
+                      };
+                      if (ref !== undefined) {
+                        tmp.ref = Caml_option.valFromOption(ref);
+                      }
+                      return React.createElement("div", tmp, React.createElement(Filters$FilterItem, {
+                                      item: item,
+                                      selected: selected,
+                                      setSelected: setSelected
+                                    }));
+                    })), match$2[0] ? React.createElement("div", {
+                    className: "h-[1.7rem] w-[1.7rem] rounded-full border border-[#c3c3c3] flex justify-center items-center self-center -ml-8 bg-white cursor-pointer",
+                    style: {
+                      zIndex: "2"
+                    },
+                    onClick: (function (param) {
+                        return scrollToLeft(lastTabRef);
+                      })
+                  }, React.createElement(Icon$RescriptReactTemplate.make, {
+                        name: "right-chevron",
+                        size: 11
+                      })) : null, React.createElement("div", {
                   className: " w-[10%] m-auto flex justify-end "
                 }, React.createElement("div", {
                       className: "flex flex-row justify-center border border-[#dddddd] rounded-xl w-fit p-4 gap-3 items-center cursor-pointer"
@@ -85,6 +169,8 @@ var make = Filters;
 
 export {
   FilterItem ,
+  scrollToLeft ,
+  getBoundingRectInfo ,
   make ,
   
 }

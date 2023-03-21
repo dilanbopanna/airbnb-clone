@@ -11,17 +11,11 @@ module.exports = {
     plugins: [
         plugin(function ({ addUtilities }) {
             const newUtilities = {
-                ".no-scrollbar::-webkit-scrollbar": {
-                    display: "none",
+                "*::-webkit-scrollbar": {
+                    display: "none", // chrome and other
                 },
-                ".show-scrollbar::-webkit-scrollbar": {
-                    overflow: "scroll",
-                    height: "4px",
-                    width: "4px",
-                },
-                ".show-scrollbar::-webkit-scrollbar-thumb": {
-                    borderRadius: "2px",
-                    backgroundColor: "#9A9FA8",
+                "*": {
+                    scrollbarWidth: "none", // firefox
                 },
             };
             addUtilities(newUtilities);

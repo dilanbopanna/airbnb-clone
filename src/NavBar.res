@@ -53,7 +53,7 @@ let make = (~openProfile, ~setOpenProfile) => {
         : "h-20 sm:h-40"} border border-b-[#ebebeb] flex flex-col`}
     ref={navRef->ReactDOM.Ref.domRef}
     style={ReactDOMStyle.make(~transition="height 0.5s ease", ())}>
-    <div className="flex flex-row items-center justify-between px-5 md:px-10 lg:px-16 h-auto py-4">
+    <div className="flex flex-row items-center justify-between px-5 md:px-10 lg:px-16 h-auto py-3">
       <div className="text-[#fe385c] xl:w-1/3 hidden md:flex"> {AirbnbSvg.bnbwithtext} </div>
       <div className="text-[#fe385c] xl:w-1/3 hidden md:hidden sm:flex"> {AirbnbSvg.bnblogo} </div>
       <Search openSearch setOpenSearch catagory setCatagory />

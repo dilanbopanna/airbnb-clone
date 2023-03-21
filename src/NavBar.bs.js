@@ -84,7 +84,7 @@ function NavBar(Props) {
                 transition: "height 0.5s ease"
               }
             }, React.createElement("div", {
-                  className: "flex flex-row items-center justify-between px-5 md:px-10 lg:px-16 h-auto py-4"
+                  className: "flex flex-row items-center justify-between px-5 md:px-10 lg:px-16 h-auto py-3"
                 }, React.createElement("div", {
                       className: "text-[#fe385c] xl:w-1/3 hidden md:flex"
                     }, AirbnbSvg$RescriptReactTemplate.bnbwithtext), React.createElement("div", {

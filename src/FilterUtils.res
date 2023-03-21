@@ -204,4 +204,124 @@ let filters = [
     name: "Amazing pools",
     type_: "amazingpools",
   },
+  {
+    icon: <img
+      src="https://a0.muscache.com/pictures/c0a24c04-ce1f-490c-833f-987613930eca.jpg"
+      alt=""
+      width="24"
+      height="24"
+    />,
+    name: "National parks",
+    type_: "nationalparks",
+  },
+  {
+    icon: <img
+      src="https://a0.muscache.com/pictures/10ce1091-c854-40f3-a2fb-defc2995bcaf.jpg"
+      alt=""
+      width="24"
+      height="24"
+    />,
+    name: "Beach",
+    type_: "beach",
+  },
+  {
+    icon: <img
+      src="https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg"
+      alt=""
+      width="24"
+      height="24"
+    />,
+    name: "Cabins",
+    type_: "cabins",
+  },
+  {
+    icon: <img
+      src="https://a0.muscache.com/pictures/31c1d523-cc46-45b3-957a-da76c30c85f9.jpg"
+      alt=""
+      width="24"
+      height="24"
+    />,
+    name: "Camper vans",
+    type_: "campervans",
+  },
+  {
+    icon: <img
+      src="https://a0.muscache.com/pictures/8b44f770-7156-4c7b-b4d3-d92549c8652f.jpg"
+      alt=""
+      width="24"
+      height="24"
+    />,
+    name: "Arctic",
+    type_: "arctic",
+  },
+  {
+    icon: <img
+      src="https://a0.muscache.com/pictures/ca25c7f3-0d1f-432b-9efa-b9f5dc6d8770.jpg"
+      alt=""
+      width="24"
+      height="24"
+    />,
+    name: "Camping",
+    type_: "camping",
+  },
+  {
+    icon: <img
+      src="https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg"
+      alt=""
+      width="24"
+      height="24"
+    />,
+    name: "Lakefront",
+    type_: "lakefront",
+  },
+  {
+    icon: <img
+      src="https://a0.muscache.com/pictures/6b639c8d-cf9b-41fb-91a0-91af9d7677cc.jpg"
+      alt=""
+      width="24"
+      height="24"
+    />,
+    name: "Golfing",
+    type_: "golfing",
+  },
+  {
+    icon: <img
+      src="https://a0.muscache.com/pictures/60ff02ae-d4a2-4d18-a120-0dd274a95925.jpg"
+      alt=""
+      width="24"
+      height="24"
+    />,
+    name: "Vineyards",
+    type_: "vineyards",
+  },
+  {
+    icon: <img
+      src="https://a0.muscache.com/pictures/51f5cf64-5821-400c-8033-8a10c7787d69.jpg"
+      alt=""
+      width="24"
+      height="24"
+    />,
+    name: "Hanoks",
+    type_: "hanoks",
+  },
+  {
+    icon: <img
+      src="https://a0.muscache.com/pictures/ed8b9e47-609b-44c2-9768-33e6a22eccb2.jpg"
+      alt=""
+      width="24"
+      height="24"
+    />,
+    name: "Iconic cities",
+    type_: "iconiccities",
+  },
+  {
+    icon: <img
+      src="https://a0.muscache.com/pictures/c027ff1a-b89c-4331-ae04-f8dee1cdc287.jpg"
+      alt=""
+      width="24"
+      height="24"
+    />,
+    name: "House boats",
+    type_: "houseboats",
+  },
 ]
