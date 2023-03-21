@@ -64,11 +64,21 @@ let make = (~openProfile) => {
 
   <div className=" hidden sm:flex flex-row h-20 w-full shadow-md px-5 md:px-10 lg:px-16">
     {isLeftArrowVisible
-      ? <div
-          className="h-[1.7rem] w-[1.7rem] rounded-full border border-[#c3c3c3] flex justify-center items-center self-center -mr-8 bg-white cursor-pointer"
-          style={ReactDOMStyle.make(~zIndex="2", ())}
-          onClick={_ => scrollToLeft(firstTabRef)}>
-          <Icon name="left-chevron" size=11 />
+      ? <div className="flex flex-row">
+          <div
+            className="h-[1.7rem] w-[1.7rem] rounded-full border border-[#c3c3c3] flex justify-center items-center self-center -mr-8 bg-white cursor-pointer flex-row"
+            style={ReactDOMStyle.make(~zIndex="2", ())}
+            onClick={_ => scrollToLeft(firstTabRef)}>
+            <Icon name="left-chevron" size=11 />
+          </div>
+          <div
+            className="w-14 h-full -mr-9"
+            style={ReactDOMStyle.make(
+              ~backgroundImage="linear-gradient(to left,rgb(255 255 255/0),white 30px",
+              ~zIndex="1",
+              (),
+            )}
+          />
         </div>
       : React.null}
     <div
@@ -99,11 +109,21 @@ let make = (~openProfile) => {
       ->React.array}
     </div>
     {isRightArrowVisible
-      ? <div
-          className="h-[1.7rem] w-[1.7rem] rounded-full border border-[#c3c3c3] flex justify-center items-center self-center -ml-8 bg-white cursor-pointer"
-          style={ReactDOMStyle.make(~zIndex="2", ())}
-          onClick={_ => scrollToLeft(lastTabRef)}>
-          <Icon name="right-chevron" size=11 />
+      ? <div className="flex flex-row">
+          <div
+            className="h-[1.7rem] w-[1.7rem] rounded-full border border-[#c3c3c3] flex justify-center items-center self-center -ml-8 bg-white cursor-pointer flex-row"
+            style={ReactDOMStyle.make(~zIndex=openProfile ? "-1" : "2", ())}
+            onClick={_ => scrollToLeft(lastTabRef)}>
+            <Icon name="right-chevron" size=11 />
+          </div>
+          <div
+            className="w-14 h-full -ml-9"
+            style={ReactDOMStyle.make(
+              ~backgroundImage="linear-gradient(to right,rgb(255 255 255/0), white 40px",
+              ~zIndex="1",
+              (),
+            )}
+          />
         </div>
       : React.null}
     <div className=" w-[10%] m-auto flex justify-end ">

@@ -107,16 +107,24 @@ function Filters(Props) {
   return React.createElement("div", {
               className: " hidden sm:flex flex-row h-20 w-full shadow-md px-5 md:px-10 lg:px-16"
             }, match$1[0] ? React.createElement("div", {
-                    className: "h-[1.7rem] w-[1.7rem] rounded-full border border-[#c3c3c3] flex justify-center items-center self-center -mr-8 bg-white cursor-pointer",
-                    style: {
-                      zIndex: "2"
-                    },
-                    onClick: (function (param) {
-                        return scrollToLeft(firstTabRef);
-                      })
-                  }, React.createElement(Icon$RescriptReactTemplate.make, {
-                        name: "left-chevron",
-                        size: 11
+                    className: "flex flex-row"
+                  }, React.createElement("div", {
+                        className: "h-[1.7rem] w-[1.7rem] rounded-full border border-[#c3c3c3] flex justify-center items-center self-center -mr-8 bg-white cursor-pointer flex-row",
+                        style: {
+                          zIndex: "2"
+                        },
+                        onClick: (function (param) {
+                            return scrollToLeft(firstTabRef);
+                          })
+                      }, React.createElement(Icon$RescriptReactTemplate.make, {
+                            name: "left-chevron",
+                            size: 11
+                          })), React.createElement("div", {
+                        className: "w-14 h-full -mr-9",
+                        style: {
+                          backgroundImage: "linear-gradient(to left,rgb(255 255 255/0),white 30px",
+                          zIndex: "1"
+                        }
                       })) : null, React.createElement("div", {
                   ref: scrollRef,
                   className: "flex flex-row gap-8 w-[90%] overflow-x-scroll relative",
@@ -142,16 +150,24 @@ function Filters(Props) {
                                       setSelected: setSelected
                                     }));
                     })), match$2[0] ? React.createElement("div", {
-                    className: "h-[1.7rem] w-[1.7rem] rounded-full border border-[#c3c3c3] flex justify-center items-center self-center -ml-8 bg-white cursor-pointer",
-                    style: {
-                      zIndex: "2"
-                    },
-                    onClick: (function (param) {
-                        return scrollToLeft(lastTabRef);
-                      })
-                  }, React.createElement(Icon$RescriptReactTemplate.make, {
-                        name: "right-chevron",
-                        size: 11
+                    className: "flex flex-row"
+                  }, React.createElement("div", {
+                        className: "h-[1.7rem] w-[1.7rem] rounded-full border border-[#c3c3c3] flex justify-center items-center self-center -ml-8 bg-white cursor-pointer flex-row",
+                        style: {
+                          zIndex: openProfile ? "-1" : "2"
+                        },
+                        onClick: (function (param) {
+                            return scrollToLeft(lastTabRef);
+                          })
+                      }, React.createElement(Icon$RescriptReactTemplate.make, {
+                            name: "right-chevron",
+                            size: 11
+                          })), React.createElement("div", {
+                        className: "w-14 h-full -ml-9",
+                        style: {
+                          backgroundImage: "linear-gradient(to right,rgb(255 255 255/0), white 40px",
+                          zIndex: "1"
+                        }
                       })) : null, React.createElement("div", {
                   className: " w-[10%] m-auto flex justify-end "
                 }, React.createElement("div", {
