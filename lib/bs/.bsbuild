@@ -1,8 +1,9 @@
-10
+11
 App
 Icon
 Index
 Types
+Footer
 NavBar
 Search
 Filters
@@ -10,5 +11,5 @@ AirbnbSvg
 FilterUtils
 OutsideClick
 src	src/Utilities	
-1
+1
 0

@@ -1,1 +1,1 @@
-src/App-RescriptReactTemplate.cmj : RescriptReactTemplate.cmi src/Filters-RescriptReactTemplate.cmj src/Filters-RescriptReactTemplate.cmi src/NavBar-RescriptReactTemplate.cmj src/NavBar-RescriptReactTemplate.cmi
+src/App-RescriptReactTemplate.cmj : RescriptReactTemplate.cmi src/Filters-RescriptReactTemplate.cmj src/Filters-RescriptReactTemplate.cmi src/Footer-RescriptReactTemplate.cmj src/Footer-RescriptReactTemplate.cmi src/NavBar-RescriptReactTemplate.cmj src/NavBar-RescriptReactTemplate.cmi

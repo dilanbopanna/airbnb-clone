@@ -48,9 +48,9 @@ let make = (~openProfile, ~setOpenProfile) => {
     <div className={`h-auto w-[1px] ${!hover ? "bg-[#dddddd]" : "bg-transparent"} my-2`} />
 
   <div
-    className={`sticky ${!openSearch
+    className={` ${!openSearch
         ? "h-20"
-        : "h-20 sm:h-40"} border border-b-[#ebebeb] flex flex-col`}
+        : "h-20 sm:h-40"} sm:border sm:border-b-[#ebebeb] flex flex-col`}
     ref={navRef->ReactDOM.Ref.domRef}
     style={ReactDOMStyle.make(~transition="height 0.5s ease", ())}>
     <div className="flex flex-row items-center justify-between px-5 md:px-10 lg:px-16 h-auto py-3">

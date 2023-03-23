@@ -77,9 +77,9 @@ function NavBar(Props) {
       });
   return React.createElement("div", {
               ref: navRef,
-              className: "sticky " + (
+              className: " " + (
                 openSearch ? "h-20 sm:h-40" : "h-20"
-              ) + " border border-b-[#ebebeb] flex flex-col",
+              ) + " sm:border sm:border-b-[#ebebeb] flex flex-col",
               style: {
                 transition: "height 0.5s ease"
               }

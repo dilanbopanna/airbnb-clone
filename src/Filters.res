@@ -62,9 +62,9 @@ let make = (~openProfile) => {
     setIsRightArrowVisible(_ => newIsRightArrowVisible)
   }
 
-  <div className=" hidden sm:flex flex-row h-20 w-full shadow-md px-5 md:px-10 lg:px-16">
+  <div className="flex flex-row h-20 w-full shadow-md px-5 md:px-10 lg:px-16">
     {isLeftArrowVisible
-      ? <div className="flex flex-row">
+      ? <div className="hidden sm:flex flex-row">
           <div
             className="h-[1.7rem] w-[1.7rem] rounded-full border border-[#c3c3c3] flex justify-center items-center self-center -mr-8 bg-white cursor-pointer flex-row"
             style={ReactDOMStyle.make(~zIndex="2", ())}
@@ -82,7 +82,7 @@ let make = (~openProfile) => {
         </div>
       : React.null}
     <div
-      className="flex flex-row gap-8 w-[90%] overflow-x-scroll relative"
+      className="flex flex-row gap-8 w-full sm:w-[90%] overflow-x-scroll relative"
       ref={scrollRef->ReactDOM.Ref.domRef}
       onScroll>
       {FilterUtils.filters
@@ -109,7 +109,7 @@ let make = (~openProfile) => {
       ->React.array}
     </div>
     {isRightArrowVisible
-      ? <div className="flex flex-row">
+      ? <div className="hidden sm:flex flex-row">
           <div
             className="h-[1.7rem] w-[1.7rem] rounded-full border border-[#c3c3c3] flex justify-center items-center self-center -ml-8 bg-white cursor-pointer flex-row"
             style={ReactDOMStyle.make(~zIndex=openProfile ? "-1" : "2", ())}
@@ -126,7 +126,7 @@ let make = (~openProfile) => {
           />
         </div>
       : React.null}
-    <div className=" w-[10%] m-auto flex justify-end ">
+    <div className=" w-0 sm:w-[10%] m-auto hidden sm:flex justify-end ">
       <div
         className="flex flex-row justify-center border border-[#dddddd] rounded-xl w-fit p-4 gap-3 items-center cursor-pointer">
         <Icon name="filter" className="text-[#222222]" size=14 />

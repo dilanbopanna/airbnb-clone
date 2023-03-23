@@ -105,9 +105,9 @@ function Filters(Props) {
                 }));
   };
   return React.createElement("div", {
-              className: " hidden sm:flex flex-row h-20 w-full shadow-md px-5 md:px-10 lg:px-16"
+              className: "flex flex-row h-20 w-full shadow-md px-5 md:px-10 lg:px-16"
             }, match$1[0] ? React.createElement("div", {
-                    className: "flex flex-row"
+                    className: "hidden sm:flex flex-row"
                   }, React.createElement("div", {
                         className: "h-[1.7rem] w-[1.7rem] rounded-full border border-[#c3c3c3] flex justify-center items-center self-center -mr-8 bg-white cursor-pointer flex-row",
                         style: {
@@ -127,7 +127,7 @@ function Filters(Props) {
                         }
                       })) : null, React.createElement("div", {
                   ref: scrollRef,
-                  className: "flex flex-row gap-8 w-[90%] overflow-x-scroll relative",
+                  className: "flex flex-row gap-8 w-full sm:w-[90%] overflow-x-scroll relative",
                   onScroll: onScroll
                 }, FilterUtils$RescriptReactTemplate.filters.map(function (item, i) {
                       var ref = i === 0 ? Caml_option.some(firstTabRef) : (
@@ -150,7 +150,7 @@ function Filters(Props) {
                                       setSelected: setSelected
                                     }));
                     })), match$2[0] ? React.createElement("div", {
-                    className: "flex flex-row"
+                    className: "hidden sm:flex flex-row"
                   }, React.createElement("div", {
                         className: "h-[1.7rem] w-[1.7rem] rounded-full border border-[#c3c3c3] flex justify-center items-center self-center -ml-8 bg-white cursor-pointer flex-row",
                         style: {
@@ -169,7 +169,7 @@ function Filters(Props) {
                           zIndex: "1"
                         }
                       })) : null, React.createElement("div", {
-                  className: " w-[10%] m-auto flex justify-end "
+                  className: " w-0 sm:w-[10%] m-auto hidden sm:flex justify-end "
                 }, React.createElement("div", {
                       className: "flex flex-row justify-center border border-[#dddddd] rounded-xl w-fit p-4 gap-3 items-center cursor-pointer"
                     }, React.createElement(Icon$RescriptReactTemplate.make, {

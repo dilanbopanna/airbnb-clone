@@ -17,6 +17,9 @@ module.exports = {
                 "*": {
                     scrollbarWidth: "none", // firefox
                 },
+                "*": {
+                    "-webkit-tap-highlight-color": "transparent",
+                }
             };
             addUtilities(newUtilities);
         }),

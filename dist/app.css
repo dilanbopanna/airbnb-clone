@@ -521,6 +521,10 @@ video {
   right: 4rem;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .top-16 {
   top: 4rem;
 }
@@ -546,8 +550,16 @@ video {
   margin-left: -2rem;
 }
 
+.-ml-9 {
+  margin-left: -2.25rem;
+}
+
 .-mr-8 {
   margin-right: -2rem;
+}
+
+.-mr-9 {
+  margin-right: -2.25rem;
 }
 
 .ml-2 {
@@ -630,12 +642,20 @@ video {
   height: 100%;
 }
 
+.w-0 {
+  width: 0px;
+}
+
 .w-10 {
   width: 2.5rem;
 }
 
 .w-11 {
   width: 2.75rem;
+}
+
+.w-14 {
+  width: 3.5rem;
 }
 
 .w-64 {
@@ -650,16 +670,8 @@ video {
   width: 1.7rem;
 }
 
-.w-\[10\%\] {
-  width: 10%;
-}
-
 .w-\[1px\] {
   width: 1px;
-}
-
-.w-\[90\%\] {
-  width: 90%;
 }
 
 .w-auto {
@@ -676,6 +688,10 @@ video {
 
 .w-max {
   width: max-content;
+}
+
+.w-screen {
+  width: 100vw;
 }
 
 .min-w-\[3\.7rem\] {
@@ -728,6 +744,10 @@ video {
 
 .gap-1 {
   gap: 0.25rem;
+}
+
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .gap-2 {
@@ -786,11 +806,6 @@ video {
 .border-\[\#dddddd\] {
   --tw-border-opacity: 1;
   border-color: rgb(221 221 221 / var(--tw-border-opacity));
-}
-
-.border-b-\[\#ebebeb\] {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(235 235 235 / var(--tw-border-opacity));
 }
 
 .bg-\[\#222222\] {
@@ -953,6 +968,11 @@ video {
   color: rgb(78 78 78 / var(--tw-text-opacity));
 }
 
+.text-\[\#585858\] {
+  --tw-text-opacity: 1;
+  color: rgb(88 88 88 / var(--tw-text-opacity));
+}
+
 .text-\[\#717171\] {
   --tw-text-opacity: 1;
   color: rgb(113 113 113 / var(--tw-text-opacity));
@@ -961,6 +981,11 @@ video {
 .text-\[\#fe385c\] {
   --tw-text-opacity: 1;
   color: rgb(254 56 92 / var(--tw-text-opacity));
+}
+
+.text-\[\#ff385c\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 56 92 / var(--tw-text-opacity));
 }
 
 .text-black {
@@ -1027,7 +1052,7 @@ video {
 }
 
 * {
-  scrollbar-width: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .hover\:bg-\[\#ebebeb\]:hover {
@@ -1042,6 +1067,10 @@ video {
 
 .hover\:bg-clip-padding:hover {
   background-clip: padding-box;
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
 }
 
 .hover\:opacity-100:hover {
@@ -1066,6 +1095,23 @@ video {
 
   .sm\:h-40 {
     height: 10rem;
+  }
+
+  .sm\:w-\[10\%\] {
+    width: 10%;
+  }
+
+  .sm\:w-\[90\%\] {
+    width: 90%;
+  }
+
+  .sm\:border {
+    border-width: 1px;
+  }
+
+  .sm\:border-b-\[\#ebebeb\] {
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(235 235 235 / var(--tw-border-opacity));
   }
 }
 
