@@ -1,15 +1,19 @@
-11
+15
 App
 Icon
+Stay
 Index
 Types
 Footer
 NavBar
 Search
 Filters
+Carousel
 AirbnbSvg
+ViewStays
+LogicUtils
 FilterUtils
 OutsideClick
-src	src/Utilities	
-1
+src	src/Types	src/Components	src/Utilities	
+1
 0

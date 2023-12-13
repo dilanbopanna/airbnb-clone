@@ -1,16 +1,16 @@
 rescript = 1
-g_finger := /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/@rescript/react/lib/ocaml/install.stamp
-g_finger := /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/bs-fetch/lib/ocaml/install.stamp
-g_finger := /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/bs-webapi/lib/ocaml/install.stamp
+g_finger := /Users/bopannaj/Code/airbnb-clone/node_modules/@rescript/react/lib/ocaml/install.stamp
+g_finger := /Users/bopannaj/Code/airbnb-clone/node_modules/bs-fetch/lib/ocaml/install.stamp
+g_finger := /Users/bopannaj/Code/airbnb-clone/node_modules/bs-webapi/lib/ocaml/install.stamp
 rule astj
-  command = /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/rescript/darwin/bsc.exe  -bs-v 9.1.4 -bs-jsx 3 -bs-super-errors -absname -bs-ast -o $out $i
+  command = /Users/bopannaj/Code/airbnb-clone/node_modules/rescript/darwin/bsc.exe  -bs-v 9.1.4 -bs-jsx 3 -bs-super-errors -absname -bs-ast -o $out $i
 o src/App.ast : astj ../../src/App.res
 rule deps
-  command = /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/rescript/darwin/bsb_helper.exe -hash 091b2814bee28bc4603c706cb079cb4d -bs-ns RescriptReactTemplate $in
+  command = /Users/bopannaj/Code/airbnb-clone/node_modules/rescript/darwin/bsb_helper.exe -hash ed0d81e4abd313a4e4d1eb3538610645 -bs-ns RescriptReactTemplate $in
   restat = 1
 o src/App.d : deps src/App.ast
 rule mij
-  command = /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/rescript/darwin/bsc.exe -bs-ns RescriptReactTemplate -I . -I src/Utilities -I src -I /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/@rescript/react/lib/ocaml -I /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/bs-fetch/lib/ocaml -I /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/bs-webapi/lib/ocaml -bs-super-errors  -bs-package-name rescript-react-template -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  command = /Users/bopannaj/Code/airbnb-clone/node_modules/rescript/darwin/bsc.exe -bs-ns RescriptReactTemplate -I . -I src/Types -I src/Utilities -I src/Components -I src -I /Users/bopannaj/Code/airbnb-clone/node_modules/@rescript/react/lib/ocaml -I /Users/bopannaj/Code/airbnb-clone/node_modules/bs-fetch/lib/ocaml -I /Users/bopannaj/Code/airbnb-clone/node_modules/bs-webapi/lib/ocaml -bs-super-errors  -bs-package-name rescript-react-template -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src/App-RescriptReactTemplate.cmj src/App-RescriptReactTemplate.cmi ../../src/App.bs.js : mij src/App.ast
@@ -23,28 +23,40 @@ o src/Index-RescriptReactTemplate.cmj src/Index-RescriptReactTemplate.cmi ../../
 o src/Types.ast : astj ../../src/Types.res
 o src/Types.d : deps src/Types.ast
 o src/Types-RescriptReactTemplate.cmj src/Types-RescriptReactTemplate.cmi ../../src/Types.bs.js : mij src/Types.ast
-o src/Footer.ast : astj ../../src/Footer.res
-o src/Footer.d : deps src/Footer.ast
-o src/Footer-RescriptReactTemplate.cmj src/Footer-RescriptReactTemplate.cmi ../../src/Footer.bs.js : mij src/Footer.ast
-o src/NavBar.ast : astj ../../src/NavBar.res
-o src/NavBar.d : deps src/NavBar.ast
-o src/NavBar-RescriptReactTemplate.cmj src/NavBar-RescriptReactTemplate.cmi ../../src/NavBar.bs.js : mij src/NavBar.ast
-o src/Search.ast : astj ../../src/Search.res
-o src/Search.d : deps src/Search.ast
-o src/Search-RescriptReactTemplate.cmj src/Search-RescriptReactTemplate.cmi ../../src/Search.bs.js : mij src/Search.ast
-o src/Filters.ast : astj ../../src/Filters.res
-o src/Filters.d : deps src/Filters.ast
-o src/Filters-RescriptReactTemplate.cmj src/Filters-RescriptReactTemplate.cmi ../../src/Filters.bs.js : mij src/Filters.ast
 o src/AirbnbSvg.ast : astj ../../src/AirbnbSvg.res
 o src/AirbnbSvg.d : deps src/AirbnbSvg.ast
 o src/AirbnbSvg-RescriptReactTemplate.cmj src/AirbnbSvg-RescriptReactTemplate.cmi ../../src/AirbnbSvg.bs.js : mij src/AirbnbSvg.ast
-o src/FilterUtils.ast : astj ../../src/FilterUtils.res
-o src/FilterUtils.d : deps src/FilterUtils.ast
-o src/FilterUtils-RescriptReactTemplate.cmj src/FilterUtils-RescriptReactTemplate.cmi ../../src/FilterUtils.bs.js : mij src/FilterUtils.ast
+o src/ViewStays.ast : astj ../../src/ViewStays.res
+o src/ViewStays.d : deps src/ViewStays.ast
+o src/ViewStays-RescriptReactTemplate.cmj src/ViewStays-RescriptReactTemplate.cmi ../../src/ViewStays.bs.js : mij src/ViewStays.ast
+o src/Components/Footer.ast : astj ../../src/Components/Footer.res
+o src/Components/Footer.d : deps src/Components/Footer.ast
+o src/Components/Footer-RescriptReactTemplate.cmj src/Components/Footer-RescriptReactTemplate.cmi ../../src/Components/Footer.bs.js : mij src/Components/Footer.ast
+o src/Components/NavBar.ast : astj ../../src/Components/NavBar.res
+o src/Components/NavBar.d : deps src/Components/NavBar.ast
+o src/Components/NavBar-RescriptReactTemplate.cmj src/Components/NavBar-RescriptReactTemplate.cmi ../../src/Components/NavBar.bs.js : mij src/Components/NavBar.ast
+o src/Components/Search.ast : astj ../../src/Components/Search.res
+o src/Components/Search.d : deps src/Components/Search.ast
+o src/Components/Search-RescriptReactTemplate.cmj src/Components/Search-RescriptReactTemplate.cmi ../../src/Components/Search.bs.js : mij src/Components/Search.ast
+o src/Components/Filters.ast : astj ../../src/Components/Filters.res
+o src/Components/Filters.d : deps src/Components/Filters.ast
+o src/Components/Filters-RescriptReactTemplate.cmj src/Components/Filters-RescriptReactTemplate.cmi ../../src/Components/Filters.bs.js : mij src/Components/Filters.ast
+o src/Components/Carousel.ast : astj ../../src/Components/Carousel.res
+o src/Components/Carousel.d : deps src/Components/Carousel.ast
+o src/Components/Carousel-RescriptReactTemplate.cmj src/Components/Carousel-RescriptReactTemplate.cmi ../../src/Components/Carousel.bs.js : mij src/Components/Carousel.ast
+o src/Utilities/LogicUtils.ast : astj ../../src/Utilities/LogicUtils.res
+o src/Utilities/LogicUtils.d : deps src/Utilities/LogicUtils.ast
+o src/Utilities/LogicUtils-RescriptReactTemplate.cmj src/Utilities/LogicUtils-RescriptReactTemplate.cmi ../../src/Utilities/LogicUtils.bs.js : mij src/Utilities/LogicUtils.ast
+o src/Utilities/FilterUtils.ast : astj ../../src/Utilities/FilterUtils.res
+o src/Utilities/FilterUtils.d : deps src/Utilities/FilterUtils.ast
+o src/Utilities/FilterUtils-RescriptReactTemplate.cmj src/Utilities/FilterUtils-RescriptReactTemplate.cmi ../../src/Utilities/FilterUtils.bs.js : mij src/Utilities/FilterUtils.ast
 o src/Utilities/OutsideClick.ast : astj ../../src/Utilities/OutsideClick.res
 o src/Utilities/OutsideClick.d : deps src/Utilities/OutsideClick.ast
 o src/Utilities/OutsideClick-RescriptReactTemplate.cmj src/Utilities/OutsideClick-RescriptReactTemplate.cmi ../../src/Utilities/OutsideClick.bs.js : mij src/Utilities/OutsideClick.ast
+o src/Types/Stay.ast : astj ../../src/Types/Stay.res
+o src/Types/Stay.d : deps src/Types/Stay.ast
+o src/Types/Stay-RescriptReactTemplate.cmj src/Types/Stay-RescriptReactTemplate.cmi ../../src/Types/Stay.bs.js : mij src/Types/Stay.ast
 rule build_package
-  command = /Users/bopanna/Code/Airbnb-clone/airbnb/node_modules/rescript/darwin/bsc.exe -w -49 -color always -no-alias-deps  $i
+  command = /Users/bopannaj/Code/airbnb-clone/node_modules/rescript/darwin/bsc.exe -w -49 -color always -no-alias-deps  $i
   restat = 1
 o RescriptReactTemplate.cmi : build_package RescriptReactTemplate.mlmap

@@ -1,0 +1,295 @@
+[
+  {
+    "name": "Kodaikanal, India",
+    "images": [
+      "/stays/Kodaikanal1.webp",
+      "/stays/Kodaikanal2.webp",
+      "/stays/Kodaikanal3.webp",
+      "/stays/Kodaikanal4.webp",
+      "/stays/Kodaikanal5.webp"
+    ],
+    "rating": "4.98",
+    "distance": "809",
+    "price": "1,245"
+  },
+  {
+    "name": "Flat in Valsassina",
+    "images": [
+      "/stays/Valsassina1.jpeg",
+      "/stays/Valsassina2.webp",
+      "/stays/Valsassina3.webp",
+      "/stays/Valsassina4.webp",
+      "/stays/Valsassina5.webp",
+      "/stays/Valsassina6.webp"
+    ],
+    "rating": "4.56",
+    "distance": "2034",
+    "price": "5,234"
+  },
+  {
+    "name": "Cute Apt in Valsassina",
+    "images": [
+      "/stays/Cute_Apartment_Valsassina1.webp",
+      "/stays/Cute_Apartment_Valsassina2.webp",
+      "/stays/Cute_Apartment_Valsassina3.jpeg",
+      "/stays/Cute_Apartment_Valsassina4.jpeg",
+      "/stays/Cute_Apartment_Valsassina5.webp",
+      "/stays/Cute_Apartment_Valsassina6.jpeg"
+    ],
+    "rating": "4.62",
+    "distance": "3022",
+    "price": "4,342"
+  },
+  {
+    "name": "Nature House, Varenna",
+    "images": [
+      "/stays/Nature_Varenna1.webp",
+      "/stays/Nature_Varenna2.webp",
+      "/stays/Nature_Varenna3.webp",
+      "/stays/Nature_Varenna4.webp",
+      "/stays/Nature_Varenna5.webp",
+      "/stays/Nature_Varenna6.webp"
+    ],
+    "rating": "4.82",
+    "distance": "4231",
+    "price": "5,322"
+  },
+  {
+    "name": "New Castle, Lierna",
+    "images": [
+      "/stays/New_Castle_Lierna1.webp",
+      "/stays/New_Castle_Lierna2.webp",
+      "/stays/New_Castle_Lierna3.webp",
+      "/stays/New_Castle_Lierna4.webp",
+      "/stays/New_Castle_Lierna5.webp",
+      "/stays/New_Castle_Lierna6.webp"
+    ],
+    "rating": "4.69",
+    "distance": "3022",
+    "price": "4,092"
+  },
+  {
+    "name": "Villa Mandra, Thailand",
+    "images": [
+      "/stays/Villa_Mandra_Thailand1.webp",
+      "/stays/Villa_Mandra_Thailand2.webp",
+      "/stays/Villa_Mandra_Thailand3.webp",
+      "/stays/Villa_Mandra_Thailand4.webp",
+      "/stays/Villa_Mandra_Thailand5.webp",
+      "/stays/Villa_Mandra_Thailand6.webp"
+    ],
+    "rating": "4.89",
+    "distance": "1462",
+    "price": "34,765"
+  },
+  {
+    "name": "The Spot, Thailand",
+    "images": [
+      "/stays/The_Spot_Thailand1.webp",
+      "/stays/The_Spot_Thailand2.webp",
+      "/stays/The_Spot_Thailand3.webp",
+      "/stays/The_Spot_Thailand4.webp",
+      "/stays/The_Spot_Thailand5.webp",
+      "/stays/The_Spot_Thailand6.webp"
+    ],
+    "rating": "4.81",
+    "distance": "1362",
+    "price": "11,765"
+  },
+  {
+    "name": "Water Villa, Maldives",
+    "images": [
+      "/stays/Water_Villa_Maldives1.webp",
+      "/stays/Water_Villa_Maldives2.webp",
+      "/stays/Water_Villa_Maldives3.webp",
+      "/stays/Water_Villa_Maldives4.webp",
+      "/stays/Water_Villa_Maldives5.webp",
+      "/stays/Water_Villa_Maldives6.jpeg",
+      "/stays/Water_Villa_Maldives7.webp"
+    ],
+    "rating": "4.93",
+    "distance": "700",
+    "price": "1,34,765"
+  },
+  {
+    "name": "Beach Villa, Baa Atoll",
+    "images": [
+      "/stays/Villa_Atoll1.webp",
+      "/stays/Villa_Atoll2.webp",
+      "/stays/Villa_Atoll3.webp",
+      "/stays/Villa_Atoll4.webp",
+      "/stays/Villa_Atoll5.webp",
+      "/stays/Villa_Atoll6.webp"
+    ],
+    "rating": "4.88",
+    "distance": "862",
+    "price": "54,765"
+  },
+  {
+    "name": "Room in Nilgiris, India",
+    "images": [
+      "/stays/Room_Nilgiris1.webp",
+      "/stays/Room_Nilgiris2.webp",
+      "/stays/Room_Nilgiris3.webp",
+      "/stays/Room_Nilgiris4.webp",
+      "/stays/Room_Nilgiris5.webp"
+    ],
+    "rating": "4.71",
+    "distance": "262",
+    "price": "9,462"
+  },
+  {
+    "name": "Cycladic in Oia, Greece",
+    "images": [
+      "/stays/Cycladic_Oia_Greece1.webp",
+      "/stays/Cycladic_Oia_Greece2.webp",
+      "/stays/Cycladic_Oia_Greece3.webp",
+      "/stays/Cycladic_Oia_Greece4.webp",
+      "/stays/Cycladic_Oia_Greece5.webp",
+      "/stays/Cycladic_Oia_Greece6.webp"
+    ],
+    "rating": "4.84",
+    "distance": "3262",
+    "price": "29,412"
+  },
+  {
+    "name": "Home in Loutraki, Greece",
+    "images": [
+      "/stays/Loutraki_Greece1.webp",
+      "/stays/Loutraki_Greece2.webp",
+      "/stays/Loutraki_Greece3.webp",
+      "/stays/Loutraki_Greece4.webp",
+      "/stays/Loutraki_Greece5.webp",
+      "/stays/Loutraki_Greece6.webp"
+    ],
+    "rating": "4.61",
+    "distance": "2962",
+    "price": "8,543"
+  },
+  {
+    "name": "Cabin in Yeniköy, Turkey",
+    "images": [
+      "/stays/Cabin_Yenikoy_Turkey1.webp",
+      "/stays/Cabin_Yenikoy_Turkey2.webp",
+      "/stays/Cabin_Yenikoy_Turkey3.webp",
+      "/stays/Cabin_Yenikoy_Turkey4.webp",
+      "/stays/Cabin_Yenikoy_Turkey5.webp",
+      "/stays/Cabin_Yenikoy_Turkey6.webp"
+    ],
+    "rating": "4.98",
+    "distance": "2262",
+    "price": "11,891"
+  },
+  {
+    "name": "Flat in Dubai, UAE",
+    "images": [
+      "/stays/Flat_In_Dubai1.webp",
+      "/stays/Flat_In_Dubai2.webp",
+      "/stays/Flat_In_Dubai3.webp",
+      "/stays/Flat_In_Dubai4.webp",
+      "/stays/Flat_In_Dubai5.webp",
+      "/stays/Flat_In_Dubai6.webp"
+    ],
+    "rating": "4.87",
+    "distance": "1189",
+    "price": "27,593"
+  },
+  {
+    "name": "Apt in Egypt",
+    "images": [
+      "/stays/Apt_Egypt1.webp",
+      "/stays/Apt_Egypt2.webp",
+      "/stays/Apt_Egypt3.webp",
+      "/stays/Apt_Egypt4.webp",
+      "/stays/Apt_Egypt5.webp",
+      "/stays/Apt_Egypt6.webp"
+    ],
+    "rating": "4.78",
+    "distance": "1989",
+    "price": "13,174"
+  },
+  {
+    "name": "Farm stay in Pembroke, UK",
+    "images": [
+      "/stays/FarmStay_Pembroke1.webp",
+      "/stays/FarmStay_Pembroke2.webp",
+      "/stays/FarmStay_Pembroke3.webp",
+      "/stays/FarmStay_Pembroke4.webp",
+      "/stays/FarmStay_Pembroke5.webp",
+      "/stays/FarmStay_Pembroke6.webp"
+    ],
+    "rating": "4.82",
+    "distance": "3989",
+    "price": "14,667"
+  },
+  {
+    "name": "Room in Lindfield, UK",
+    "images": [
+      "/stays/Room_Lindfield1.webp",
+      "/stays/Room_Lindfield2.webp",
+      "/stays/Room_Lindfield3.webp",
+      "/stays/Room_Lindfield4.webp",
+      "/stays/Room_Lindfield5.webp",
+      "/stays/Room_Lindfield6.webp"
+    ],
+    "rating": "4.96",
+    "distance": "3812",
+    "price": "12,279"
+  },
+  {
+    "name": "Treehouse in Gaular, Norway",
+    "images": [
+      "/stays/Treehouse_Gaular_Norway1.webp",
+      "/stays/Treehouse_Gaular_Norway2.webp",
+      "/stays/Treehouse_Gaular_Norway3.webp",
+      "/stays/Treehouse_Gaular_Norway4.webp",
+      "/stays/Treehouse_Gaular_Norway5.webp",
+      "/stays/Treehouse_Gaular_Norway6.webp"
+    ],
+    "rating": "4.92",
+    "distance": "4812",
+    "price": "22,842"
+  },
+  {
+    "name": "Cabin in Sirdal, Norway",
+    "images": [
+      "/stays/Cabin_Kommune_Norway1.webp",
+      "/stays/Cabin_Kommune_Norway2.webp",
+      "/stays/Cabin_Kommune_Norway3.webp",
+      "/stays/Cabin_Kommune_Norway4.webp",
+      "/stays/Cabin_Kommune_Norway5.webp",
+      "/stays/Cabin_Kommune_Norway6.webp"
+    ],
+    "rating": "4.88",
+    "distance": "4562",
+    "price": "15,233"
+  },
+  {
+    "name": "Treehouse in Isle, UK",
+    "images": [
+      "/stays/Treehouse_wight_UK1.webp",
+      "/stays/Treehouse_wight_UK2.webp",
+      "/stays/Treehouse_wight_UK3.webp",
+      "/stays/Treehouse_wight_UK4.webp",
+      "/stays/Treehouse_wight_UK5.webp",
+      "/stays/Treehouse_wight_UK6.webp"
+    ],
+    "rating": "4.96",
+    "distance": "4800",
+    "price": "26,297"
+  },
+  {
+    "name": "Cabin in Tampaksiring, Indonesia",
+    "images": [
+      "/stays/Cabin_Tampaksiring_Indonesia1.webp",
+      "/stays/Cabin_Tampaksiring_Indonesia2.webp",
+      "/stays/Cabin_Tampaksiring_Indonesia3.webp",
+      "/stays/Cabin_Tampaksiring_Indonesia4.webp",
+      "/stays/Cabin_Tampaksiring_Indonesia5.webp",
+      "/stays/Cabin_Tampaksiring_Indonesia6.webp"
+    ],
+    "rating": "4.86",
+    "distance": "1067",
+    "price": "29,070"
+  }
+]

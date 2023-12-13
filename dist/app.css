@@ -501,6 +501,10 @@ video {
   }
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -517,8 +521,20 @@ video {
   bottom: 0px;
 }
 
+.left-10 {
+  left: 2.5rem;
+}
+
+.right-0 {
+  right: 0px;
+}
+
 .right-16 {
   right: 4rem;
+}
+
+.right-2 {
+  right: 0.5rem;
 }
 
 .top-0 {
@@ -529,6 +545,10 @@ video {
   top: 4rem;
 }
 
+.top-\[47\%\] {
+  top: 47%;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -537,8 +557,17 @@ video {
   z-index: -2;
 }
 
+.m-3 {
+  margin: 0.75rem;
+}
+
 .m-auto {
   margin: auto;
+}
+
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .my-2 {
@@ -576,6 +605,18 @@ video {
 
 .mt-3 {
   margin-top: 0.75rem;
+}
+
+.mt-\[-0\.1em\] {
+  margin-top: -0.1em;
+}
+
+.mt-\[-0\.26px\] {
+  margin-top: -0.26px;
+}
+
+.mt-\[0\.5rem\] {
+  margin-top: 0.5rem;
 }
 
 .block {
@@ -618,12 +659,20 @@ video {
   height: 5rem;
 }
 
+.h-64 {
+  height: 16rem;
+}
+
 .h-7 {
   height: 1.75rem;
 }
 
 .h-\[1\.7rem\] {
   height: 1.7rem;
+}
+
+.h-\[1\.9rem\] {
+  height: 1.9rem;
 }
 
 .h-\[1px\] {
@@ -640,6 +689,10 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.max-h-72 {
+  max-height: 18rem;
 }
 
 .w-0 {
@@ -668,6 +721,10 @@ video {
 
 .w-\[1\.7rem\] {
   width: 1.7rem;
+}
+
+.w-\[1\.9rem\] {
+  width: 1.9rem;
 }
 
 .w-\[1px\] {
@@ -718,12 +775,20 @@ video {
   cursor: pointer;
 }
 
+.select-none {
+  user-select: none;
+}
+
 .flex-row {
   flex-direction: row;
 }
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -782,8 +847,16 @@ video {
   align-self: center;
 }
 
+.overflow-scroll {
+  overflow: scroll;
+}
+
 .overflow-x-scroll {
   overflow-x: scroll;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
 }
 
 .rounded-full {
@@ -834,6 +907,14 @@ video {
 
 .fill-current {
   fill: currentColor;
+}
+
+.stroke-white {
+  stroke: #fff;
+}
+
+.object-cover {
+  object-fit: cover;
 }
 
 .p-1 {
@@ -907,12 +988,20 @@ video {
   padding-right: 0.75rem;
 }
 
+.font-\[\#222222\] {
+  font-family: #222222;
+}
+
 .font-\[\#797979\] {
   font-family: #797979;
 }
 
 .font-fig-tree {
   font-family: "FigTree";
+}
+
+.text-\[0\.9375rem\] {
+  font-size: 0.9375rem;
 }
 
 .text-\[12px\] {
@@ -956,6 +1045,10 @@ video {
 
 .tracking-wide {
   letter-spacing: 0.025em;
+}
+
+.text-\[\#00000080\] {
+  color: #00000080;
 }
 
 .text-\[\#222222\] {
