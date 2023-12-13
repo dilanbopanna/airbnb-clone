@@ -34,7 +34,7 @@ let useOutsideClick = (
         | ArrayOfRef(refs) =>
           refs->Js.Array2.reduce((acc, ref: React.ref<Js.Nullable.t<Dom.element>>) => {
             let isClickInsideRef = switch ffToWebDom(ref.current)->Js.Nullable.toOption {
-            | Some(element) => Webapi.Dom.Element.contains(ffToDomType(targ), element)
+            | Some(element) => Webapi.Dom.Element.contains(element, ~child=ffToDomType(targ))
             | None => false
             }
             acc || isClickInsideRef
@@ -44,7 +44,7 @@ let useOutsideClick = (
           ->Js.Array2.slice(~start=0, ~end_=-1)
           ->Js.Array2.reduce((acc, ref: Js.Nullable.t<Dom.element>) => {
             let isClickInsideRef = switch ffToWebDom(ref)->Js.Nullable.toOption {
-            | Some(element) => Webapi.Dom.Element.contains(ffToDomType(targ), element)
+            | Some(element) => Webapi.Dom.Element.contains(element, ~child=ffToDomType(targ))
             | None => false
             }
             acc || isClickInsideRef
@@ -54,7 +54,7 @@ let useOutsideClick = (
         let isClickInsideOfContainer = switch containerRefs {
         | Some(ref) =>
           switch ffToWebDom(ref.current)->Js.Nullable.toOption {
-          | Some(element) => Webapi.Dom.Element.contains(ffToDomType(targ), element)
+          | Some(element) => Webapi.Dom.Element.contains(element, ~child=ffToDomType(targ))
           | None => false
           }
         | None => true
@@ -67,14 +67,14 @@ let useOutsideClick = (
 
       Js.Global.setTimeout(() => {
         events->Js.Array2.forEach(event => {
-          Webapi.Dom.Window.addEventListener(event, handleClick, Webapi.Dom.window)
+          Webapi.Dom.Window.addEventListener(Webapi.Dom.window, event, handleClick)
         })
       }, 50)->ignore
 
       Some(
         () => {
           events->Js.Array2.forEach(event =>
-            Webapi.Dom.Window.removeEventListener(event, handleClick, Webapi.Dom.window)
+            Webapi.Dom.Window.removeEventListener(Webapi.Dom.window, event, handleClick)
           )
         },
       )

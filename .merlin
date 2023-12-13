@@ -9,8 +9,8 @@ S /Users/bopannaj/Code/airbnb-clone/node_modules/@rescript/react/lib/ocaml
 B /Users/bopannaj/Code/airbnb-clone/node_modules/@rescript/react/lib/ocaml
 S /Users/bopannaj/Code/airbnb-clone/node_modules/bs-fetch/lib/ocaml
 B /Users/bopannaj/Code/airbnb-clone/node_modules/bs-fetch/lib/ocaml
-S /Users/bopannaj/Code/airbnb-clone/node_modules/bs-webapi/lib/ocaml
-B /Users/bopannaj/Code/airbnb-clone/node_modules/bs-webapi/lib/ocaml
+S /Users/bopannaj/Code/airbnb-clone/node_modules/rescript-webapi/lib/ocaml
+B /Users/bopannaj/Code/airbnb-clone/node_modules/rescript-webapi/lib/ocaml
 S src
 B lib/bs/src
 S src/Components

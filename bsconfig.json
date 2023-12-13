@@ -17,5 +17,5 @@
     "in-source": true
   },
   "jsx": { "version": 4, "mode": "classic" },
-  "bs-dependencies": ["@rescript/react", "bs-fetch", "bs-webapi"]
+  "bs-dependencies": ["@rescript/react", "bs-fetch", "rescript-webapi"]
 }

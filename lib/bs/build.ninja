@@ -1,7 +1,7 @@
 rescript = 1
 g_finger := /Users/bopannaj/Code/airbnb-clone/node_modules/@rescript/react/lib/ocaml/install.stamp
 g_finger := /Users/bopannaj/Code/airbnb-clone/node_modules/bs-fetch/lib/ocaml/install.stamp
-g_finger := /Users/bopannaj/Code/airbnb-clone/node_modules/bs-webapi/lib/ocaml/install.stamp
+g_finger := /Users/bopannaj/Code/airbnb-clone/node_modules/rescript-webapi/lib/ocaml/install.stamp
 rule astj
   command = /Users/bopannaj/Code/airbnb-clone/node_modules/rescript/darwin/bsc.exe  -bs-v 9.1.4 -bs-jsx 3 -bs-super-errors -absname -bs-ast -o $out $i
 o src/App.ast : astj ../../src/App.res
@@ -10,7 +10,7 @@ rule deps
   restat = 1
 o src/App.d : deps src/App.ast
 rule mij
-  command = /Users/bopannaj/Code/airbnb-clone/node_modules/rescript/darwin/bsc.exe -bs-ns RescriptReactTemplate -I . -I src/Types -I src/Utilities -I src/Components -I src -I /Users/bopannaj/Code/airbnb-clone/node_modules/@rescript/react/lib/ocaml -I /Users/bopannaj/Code/airbnb-clone/node_modules/bs-fetch/lib/ocaml -I /Users/bopannaj/Code/airbnb-clone/node_modules/bs-webapi/lib/ocaml -bs-super-errors  -bs-package-name rescript-react-template -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  command = /Users/bopannaj/Code/airbnb-clone/node_modules/rescript/darwin/bsc.exe -bs-ns RescriptReactTemplate -I . -I src/Types -I src/Utilities -I src/Components -I src -I /Users/bopannaj/Code/airbnb-clone/node_modules/@rescript/react/lib/ocaml -I /Users/bopannaj/Code/airbnb-clone/node_modules/bs-fetch/lib/ocaml -I /Users/bopannaj/Code/airbnb-clone/node_modules/rescript-webapi/lib/ocaml -bs-super-errors  -bs-package-name rescript-react-template -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
 o src/App-RescriptReactTemplate.cmj src/App-RescriptReactTemplate.cmi ../../src/App.bs.js : mij src/App.ast
